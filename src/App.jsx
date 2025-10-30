@@ -47,15 +47,15 @@ export default function App() {
       <section ref={aboutRef} id="about" style={{ height: '100vh', padding: '2rem', backgroundColor: '#ddd' }}>
         <About />
       </section>
-      
-      <section ref={projectsRef} id="projects" style={{ height: '100vh', padding: '2rem', backgroundColor: '#ccc' }}>
-        <Projects />
-      </section>
-      
+            
       <section ref={experienceRef} id="experience" style={{ height: '100vh', padding: '2rem', backgroundColor: '#bbb' }}>
         <Experience />
       </section>
       
+      <section ref={projectsRef} id="projects" style={{ height: '100vh', padding: '2rem', backgroundColor: '#ccc' }}>
+        <Projects />
+      </section>
+
       <section ref={contactRef} id="contact" style={{ height: '100vh', padding: '2rem', backgroundColor: '#aaa' }}>
         <Contact />
       </section>
