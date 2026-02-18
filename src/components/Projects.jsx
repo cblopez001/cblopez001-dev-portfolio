@@ -15,18 +15,12 @@ const projectsData = [
   },
   {
     id: 3,
-    title: 'CON-CONSCIOUS',
-    coverPhoto: '/path/to/project3.jpg',
-    description: 'Short description of Project Three.',
-  },
-  {
-    id: 4,
     title: 'GALAGA CLONE',
     coverPhoto: '/path/to/project4.jpg',
     description: 'Short description of Project Four.',
   },
   {
-    id: 5,
+    id: 4,
     title: 'BUG OUT',
     coverPhoto: '/path/to/project5.jpg',
     description: 'Short description of Project Five.',
