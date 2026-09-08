@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Navbar({ setSection }) {
+export default function NavBar({ setSection }) {
   return (
     <nav>
       <button onClick={() => setSection('hero')} style={{ marginRight: '1rem' }}>Home</button>
