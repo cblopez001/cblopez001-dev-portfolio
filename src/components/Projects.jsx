@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const projectsData = [
   {
@@ -39,6 +40,7 @@ export default function Projects() {
       <div className="projects-container">
         {projectsData.map(({ id, title, coverPhoto, description }) => {
           const isExpanded = expandedProject === id;
+
           return (
             <div
               key={id}
@@ -46,6 +48,7 @@ export default function Projects() {
               onClick={() => toggleExpand(id)}
             >
               <h3>{title}</h3>
+
               {isExpanded && (
                 <div className="project-details">
                   <img
@@ -53,12 +56,19 @@ export default function Projects() {
                     alt={`${title} cover`}
                     className="project-image"
                   />
+
                   <p>{description}</p>
                 </div>
               )}
             </div>
           );
         })}
+      </div>
+
+      <div className="projects-preview-footer">
+        <Link to="/projects" className="view-all-btn">
+          View All Projects →
+        </Link>
       </div>
     </section>
   );

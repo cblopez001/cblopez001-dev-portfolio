@@ -14,32 +14,19 @@ const books = [
   },
   {
     title: "Howl's Moving Castle",
-    author: 'Diana Wynn Jones',
+    author: 'Diana Wynne Jones',
     rating: 4,
     image: howlsMovingCastle,
     review: 'A masterpiece of politics, culture, and world building.'
   },
   {
-    title: '',
-    author: 'Robin Sharma',
+    title: 'The Silmarillion',
+    author: 'J.R.R. Tolkien',
     rating: 5,
-    image: currentBook,
+    image: silmarillion,
     review: 'Currently reading and enjoying every chapter.'
   },
-   {
-    title: 'Current Read',
-    author: 'Robin Sharma',
-    rating: 5,
-    image: currentBook,
-    review: 'Currently reading and enjoying every chapter.'
-  },
-   {
-    title: 'Current Read',
-    author: 'Robin Sharma',
-    rating: 5,
-    image: currentBook,
-    review: 'Currently reading and enjoying every chapter.'
-  }
+
 ];
 
 export default function About() {

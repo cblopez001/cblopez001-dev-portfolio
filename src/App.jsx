@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import BlogPreview from './components/BlogPreview';
 
 import BlogPage from './BlogPage';
+import ProjectsPage from './ProjectsPage';
 
 import './index.css';
 
@@ -54,7 +55,7 @@ function Portfolio() {
 
   return (
     <>
-      <Navbar setSection={scrollToSection} />
+      <NavBar setSection={scrollToSection} />
 
       <section
         ref={heroRef}
@@ -113,6 +114,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Portfolio />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
       </Routes>
     </BrowserRouter>
   );
