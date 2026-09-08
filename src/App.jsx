@@ -22,22 +22,27 @@ function Portfolio() {
   const blogRef = useRef(null);
 
   const scrollToSection = (section) => {
-    switch(section) {
+    switch (section) {
       case 'hero':
         heroRef.current?.scrollIntoView({ behavior: 'smooth' });
         break;
+
       case 'about':
         aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
         break;
+
       case 'projects':
         projectsRef.current?.scrollIntoView({ behavior: 'smooth' });
         break;
+
       case 'experience':
         experienceRef.current?.scrollIntoView({ behavior: 'smooth' });
         break;
+
       case 'blog':
         blogRef.current?.scrollIntoView({ behavior: 'smooth' });
         break;
+
       case 'contact':
         contactRef.current?.scrollIntoView({ behavior: 'smooth' });
         break;
@@ -50,28 +55,52 @@ function Portfolio() {
   return (
     <>
       <Navbar setSection={scrollToSection} />
-      
-      <section ref={heroRef} id="hero" style={{ minHeight: '100vh', padding: '0rem', backgroundColor: '#eee' }}>
+
+      <section
+        ref={heroRef}
+        id="hero"
+        className="page-section hero-wrapper"
+      >
         <Hero />
       </section>
-      
-      <section ref={aboutRef} id="about" style={{ minHeight: '100vh', padding: '2rem', backgroundColor: '#ddd' }}>
+
+      <section
+        ref={aboutRef}
+        id="about"
+        className="page-section about-wrapper"
+      >
         <About />
       </section>
-            
-      <section ref={experienceRef} id="experience" style={{ minHeight: '100vh', padding: '2rem', backgroundColor: '#bbb' }}>
+
+      <section
+        ref={experienceRef}
+        id="experience"
+        className="page-section experience-wrapper"
+      >
         <Experience />
       </section>
-      
-      <section ref={projectsRef} id="projects" style={{ minHeight: '100vh', padding: '2rem', backgroundColor: '#ccc' }}>
+
+      <section
+        ref={projectsRef}
+        id="projects"
+        className="page-section projects-wrapper"
+      >
         <Projects />
       </section>
 
-      <section ref={blogRef} id="blog" style={{ minHeight: '100vh', padding: '2rem', backgroundColor: '#f7f7f7' }}>
+      <section
+        ref={blogRef}
+        id="blog"
+        className="page-section blog-wrapper"
+      >
         <BlogPreview />
       </section>
 
-      <section ref={contactRef} id="contact" style={{ minHeight: '100vh', padding: '2rem', backgroundColor: '#aaa' }}>
+      <section
+        ref={contactRef}
+        id="contact"
+        className="page-section contact-wrapper"
+      >
         <Contact />
       </section>
     </>
@@ -81,10 +110,10 @@ function Portfolio() {
 export default function App() {
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Portfolio />} />
-      <Route path= "/blog" element={<BlogPage />} />
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Portfolio />} />
+        <Route path="/blog" element={<BlogPage />} />
+      </Routes>
     </BrowserRouter>
   );
 }

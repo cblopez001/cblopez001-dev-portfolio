@@ -1,100 +1,177 @@
 /* ------------------------------
+   COLOR PALETTE
+--------------------------------*/
+
+:root {
+  --cream: #F5F0E6;
+  --warm-white: #FFFDF8;
+  --phthalo-green: #174A3A;
+  --deep-green: #0F3328;
+  --sage: #718C78;
+  --terracotta: #B85C38;
+  --brown: #3B2A22;
+  --light-brown: #7A6255;
+  --border: #D8CDBD;
+  --shadow: rgba(59, 42, 34, 0.08);
+}
+
+
+/* ------------------------------
    GLOBAL RESET + BASE STYLES
 --------------------------------*/
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  background-color: var(--cream);
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: white;
-  color: #333;
+  background-color: var(--cream);
+  color: var(--brown);
   line-height: 1.6;
-  overflow-x: hidden; /* prevents horizontal scrollbars */
+  overflow-x: hidden;
 }
+
 
 /* ------------------------------
    NAVIGATION BAR
 --------------------------------*/
+
 nav {
-  background-color: #222;
-  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background-color: var(--phthalo-green);
+  color: var(--cream);
+
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+
   padding: 1rem;
+
+  box-shadow: 0 3px 12px rgba(59, 42, 34, 0.12);
 }
 
 nav button {
   background: transparent;
   border: none;
-  color: white;
+
+  color: var(--cream);
+
   font-size: 1rem;
   cursor: pointer;
+
   padding: 0.5rem 1rem;
-  transition: background 0.2s ease;
+
+  border-radius: 6px;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 nav button:hover {
-  background-color: #444;
-  border-radius: 4px;
+  background-color: var(--terracotta);
+  color: var(--warm-white);
 }
+
 
 /* ------------------------------
    HERO / BANNER SECTION
 --------------------------------*/
+
 .hero-section {
-  width: 100vw;               /* full viewport width */
-  height: 575px;              /* adjust to desired banner height */
+  width: 100%;
+  height: 575px;
+
   border: 0;
   margin: 0;
   padding: 0;
-  overflow: hidden;           /* prevents any overflow from image */
+
+  overflow: hidden;
+
+  background-color: var(--cream);
 }
 
 .hero-section img {
   width: 100%;
   height: 100%;
-  object-fit: fill;          /* ensures the image covers the area without distortion */
+
+  object-fit: fill;
+
   display: block;
 }
+
 
 /* ------------------------------
    MAIN CONTENT AREA
 --------------------------------*/
+
 main {
-  padding: 0rem;
+  padding: 0;
   max-width: 100%;
-  margin: 0 auto; /* center the main content */
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  margin: 0 auto;
+
+  background-color: var(--cream);
+
+  border-radius: 0;
+
+  box-shadow: none;
 }
+
+
+/* ------------------------------
+   SECTIONS
+--------------------------------*/
+
+section {
+  background-color: var(--warm-white);
+}
+
 
 /* ------------------------------
    SECTION HEADINGS
 --------------------------------*/
+
 section h1,
 section h2 {
   margin-bottom: 1rem;
-  color: #111;
+
+  color: var(--phthalo-green);
+
   text-align: center;
 }
+
+section h2 {
+  font-size: 2rem;
+}
+
 
 /* ------------------------------
    LINKS
 --------------------------------*/
+
 a {
-  color: #0077cc;
+  color: var(--terracotta);
   text-decoration: none;
 }
 
 a:hover {
+  color: var(--phthalo-green);
   text-decoration: underline;
 }
+
 
 /* ------------------------------
    ABOUT SECTION
@@ -102,9 +179,13 @@ a:hover {
 
 .about-section {
   max-width: 1000px;
+
   margin: 2rem auto;
   padding: 2rem;
+
   box-sizing: border-box;
+
+  background-color: var(--warm-white);
 }
 
 .about-section h2 {
@@ -113,16 +194,22 @@ a:hover {
 
 .about-content {
   display: flex;
+
   gap: 2rem;
+
   flex-wrap: wrap;
+
   align-items: flex-start;
 }
 
 .about-text,
 .currently-reading {
   flex: 1 1 45%;
+
   min-width: 300px;
+
   padding: 1rem;
+
   box-sizing: border-box;
 }
 
@@ -131,85 +218,246 @@ a:hover {
   line-height: 1.7;
 }
 
+
 /* ------------------------------
-   FUN FACT CARD 
--------------------------------- */
+   FUN FACT CARDS
+--------------------------------*/
 
 .fun-facts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
   gap: 1rem;
+
   margin-top: 2rem;
 }
 
 .fact-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  background-color: var(--warm-white);
 
   padding: 1.25rem;
+
   border-radius: 18px;
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
 
   transition:
     transform 0.3s ease,
-    box-shadow 0.3s ease;
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .fact-card:hover {
   transform: translateY(-5px);
 
+  border-color: var(--sage);
+
   box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.15),
-    0 0 20px rgba(100, 149, 237, 0.2);
+    0 10px 25px rgba(59, 42, 34, 0.08),
+    0 0 20px rgba(113, 140, 120, 0.15);
 }
 
 .fact-icon {
   font-size: 2rem;
+
   display: block;
+
   margin-bottom: 0.75rem;
 }
 
 .fact-card h3 {
   margin-bottom: 0.5rem;
+
   font-size: 1rem;
+
+  color: var(--phthalo-green);
 }
 
 .fact-card p {
   font-size: 0.95rem;
+
   line-height: 1.4;
-  opacity: 0.85;
+
+  color: var(--light-brown);
 }
+
 
 /* ------------------------------
    BOOK CAROUSEL
--------------------------------- */
+--------------------------------*/
 
 .carousel {
   display: flex;
+
   gap: 2rem;
 
   overflow-x: auto;
+
   overscroll-behavior-x: contain;
 
   scroll-snap-type: x mandatory;
+
   anchor-name: --carousel;
 
-  padding: 1rem 0;
+  padding: 1rem 0 2rem;
+
+  background-color: var(--warm-white);
+
+  scrollbar-color:
+    var(--terracotta)
+    var(--cream);
 }
 
 .carousel > .carousel__slide {
   scroll-snap-align: center;
+
   scroll-snap-stop: always;
 
   flex: 0 0 80%;
+
   min-width: 500px;
 }
 
 
 /* ------------------------------
+   BOOK CARD
+--------------------------------*/
+
+.book-card {
+  position: relative;
+
+  display: flex;
+
+  gap: 1.5rem;
+
+  padding: 1.5rem;
+
+  border-radius: 20px;
+
+  background-color: var(--phthalo-green);
+
+  color: var(--cream);
+
+  overflow: hidden;
+
+  min-height: 300px;
+
+  box-shadow:
+    0 8px 25px rgba(59, 42, 34, 0.12);
+}
+
+
+/* ------------------------------
+   BOOK IMAGE
+--------------------------------*/
+
+.book-card img {
+  position: relative;
+
+  z-index: 2;
+
+  display: block;
+
+  width: 180px;
+
+  height: 260px;
+
+  flex-shrink: 0;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ------------------------------
+   BOOK GLOW
+--------------------------------*/
+
+.book-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -20px;
+
+  z-index: 0;
+
+  background-image: var(--book-cover);
+
+  background-size: cover;
+
+  background-position: center;
+
+  filter: blur(35px);
+
+  opacity: 0.25;
+
+  transform: scale(1.2);
+}
+
+
+/* ------------------------------
+   BOOK INFORMATION
+--------------------------------*/
+
+.book-info {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 1rem;
+}
+
+.book-info h3 {
+  color: var(--cream);
+
+  font-size: 1.6rem;
+
+  margin-bottom: 0.25rem;
+}
+
+.book-author {
+  color: #D8CDBD;
+
+  font-style: italic;
+
+  margin-bottom: 1rem;
+}
+
+.book-rating {
+  color: #E0A458;
+
+  font-size: 1.25rem;
+
+  letter-spacing: 0.15rem;
+
+  margin-bottom: 1rem;
+}
+
+.book-review {
+  color: var(--cream);
+
+  line-height: 1.6;
+
+  max-width: 500px;
+}
+
+
+/* ------------------------------
    SCROLL MARKERS
--------------------------------- */
+--------------------------------*/
 
 .carousel--scroll-markers {
   scroll-marker-group: after;
@@ -217,83 +465,285 @@ a:hover {
 
 .carousel--scroll-markers::scroll-marker-group {
   position: fixed;
+
   position-anchor: --carousel;
+
   position-area: block-end;
+
   position-visibility: always;
 
   display: grid;
+
   grid-auto-flow: column;
+
   grid-auto-columns: 20px;
+
   gap: 20px;
 
   margin: 10px;
 }
 
-.carousel--scroll-markers > .carousel__slide::scroll-marker {
+.carousel--scroll-markers
+> .carousel__slide::scroll-marker {
   content: '' / attr(data-label);
 }
 
-.carousel--scroll-markers > .carousel__slide::scroll-marker:target-current {
-  background: var(--accent);
+.carousel--scroll-markers
+> .carousel__slide::scroll-marker:target-current {
+  background: var(--terracotta);
 }
-
 
 /* ------------------------------
-   ACTIVE / INACTIVE SLIDES
--------------------------------- 
-
-.carousel--inert > .carousel__slide {
-  container-type: scroll-state;
-}
-
-.carousel--inert > .carousel__slide > .book-card {
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
-}
-
-@container not scroll-state(snapped) {
-  .book-card {
-    interactivity: inert;
-    opacity: 0.25;
-    transform: scale(0.9);
-  }
-}
-*/
-
-/* ------------------------------
-   BOOK GLOW EFFECT
+   EXPERIENCE & PROJECTS SECTION
 --------------------------------*/
 
-.book-card {
-  position: relative;
+.experience-section {
+  width: 100%;
 
-  display: flex;
-  gap: 1.5rem;
+  padding: 5rem 2rem;
 
-  padding: 1.5rem;
-  border-radius: 20px;
-
-  background: rgba(20, 20, 20, 0.9);
-
-  overflow: hidden;
+  background-color: var(--cream);
 }
 
-.book-card::before {
+.experience-section h2 {
+  margin-bottom: 3rem;
+
+  color: var(--phthalo-green);
+
+  text-align: center;
+
+  font-size: 2.2rem;
+}
+
+
+/* ------------------------------
+   EXPERIENCE CONTAINER
+--------------------------------*/
+
+.experience-container {
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1.5rem;
+}
+
+
+/* ------------------------------
+   EXPERIENCE CARD
+--------------------------------*/
+
+.experience-card {
+  position: relative;
+
+  padding: 2rem 2rem 2rem 2.25rem;
+
+  background-color: var(--warm-white);
+
+  border: 1px solid var(--border);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 4px 12px rgba(59, 42, 34, 0.06);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* LEFT ACCENT */
+
+.experience-card::before {
   content: "";
 
   position: absolute;
-  inset: -20px;
-  z-index: -1;
 
-  background-image: var(--book-cover);
-  background-size: cover;
-  background-position: center;
+  left: 0;
+  top: 0;
+  bottom: 0;
 
-  filter: blur(35px);
-  opacity: 0.6;
+  width: 5px;
 
-  transform: scale(1.2);
+  background-color: var(--phthalo-green);
+
+  transition:
+    background-color 0.3s ease,
+    width 0.3s ease;
+}
+
+
+/* HOVER */
+
+.experience-card:hover {
+  transform: translateY(-4px);
+
+  border-color: var(--sage);
+
+  box-shadow:
+    0 12px 28px rgba(59, 42, 34, 0.10);
+}
+
+.experience-card:hover::before {
+  width: 7px;
+
+  background-color: var(--terracotta);
+}
+
+
+/* ------------------------------
+   EXPERIENCE TITLE
+--------------------------------*/
+
+.experience-card h3 {
+  margin-bottom: 0.4rem;
+
+  color: var(--phthalo-green);
+
+  font-size: 1.4rem;
+
+  line-height: 1.3;
+}
+
+
+/* ------------------------------
+   COMPANY
+--------------------------------*/
+
+.experience-card .company {
+  margin-bottom: 0.2rem;
+
+  color: var(--terracotta);
+
+  font-weight: 600;
+
+  font-size: 1rem;
+}
+
+
+/* ------------------------------
+   DATE
+--------------------------------*/
+
+.experience-card .duration {
+  margin-bottom: 1rem;
+
+  color: var(--sage);
+
+  font-size: 0.9rem;
+
+  font-weight: 500;
+}
+
+
+/* ------------------------------
+   TECHNOLOGY STACK
+--------------------------------*/
+
+.experience-card .tech-stack {
+  display: inline-block;
+
+  margin: 0.5rem 0 1.25rem;
+
+  padding: 0.45rem 0.75rem;
+
+  border-radius: 8px;
+
+  background-color: var(--cream);
+
+  border: 1px solid var(--border);
+
+  color: var(--light-brown);
+
+  font-size: 0.9rem;
+
+  line-height: 1.4;
+}
+
+.experience-card .tech-stack strong {
+  color: var(--phthalo-green);
+}
+
+
+/* ------------------------------
+   EXPERIENCE DESCRIPTION
+--------------------------------*/
+
+.experience-card ul {
+  list-style: none;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.65rem;
+
+  margin-top: 0.75rem;
+}
+
+.experience-card li {
+  position: relative;
+
+  padding-left: 1.5rem;
+
+  color: var(--light-brown);
+
+  line-height: 1.6;
+}
+
+
+/* CUSTOM BULLET */
+
+.experience-card li::before {
+  content: "✦";
+
+  position: absolute;
+
+  left: 0;
+
+  color: var(--terracotta);
+
+  font-size: 0.8rem;
+
+  top: 0.25rem;
+}
+
+
+/* ------------------------------
+   MOBILE
+--------------------------------*/
+
+@media (max-width: 700px) {
+
+  .experience-section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .experience-section h2 {
+    font-size: 1.8rem;
+
+    margin-bottom: 2rem;
+  }
+
+  .experience-card {
+    padding: 1.5rem 1.5rem 1.5rem 1.75rem;
+  }
+
+  .experience-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .experience-card .tech-stack {
+    display: block;
+  }
 }
 
 /* ------------------------------
@@ -301,74 +751,107 @@ a:hover {
 --------------------------------*/
 
 .projects-section {
-  height: 100vh; /* full viewport height */
+  height: 100vh;
+
   width: 100%;
+
   overflow: hidden;
+
+  background-color: var(--cream);
 }
 
 .projects-container {
   display: flex;
-  height: 100%; /* full height of section */
+
+  height: 100%;
+
   width: 100%;
-  /* prevent wrapping so panels stay in one row */
+
   flex-wrap: nowrap;
+
+  background-color: var(--phthalo-green);
 }
 
 .project-panel {
-  /* initially 1/5th width */
   flex: 1 0 20%;
+
   height: 90%;
+
   box-sizing: border-box;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
+
+  border: 1px solid var(--border);
+
+  background-color: var(--cream);
+
   cursor: pointer;
+
   padding: 1rem;
+
   overflow: hidden;
 
   display: flex;
+
   flex-direction: column;
+
   justify-content: flex-start;
 
   transition: flex-basis 0.5s ease;
+
   position: relative;
 }
 
 .project-panel h3 {
   margin-top: 0;
+
   margin-bottom: 0.5rem;
-  color: #333;
+
+  color: var(--phthalo-green);
+
   user-select: none;
 }
 
-/* Expanded panel grows to 60% width */
 .project-panel.expanded {
   flex-basis: 60%;
-  background-color: #fff;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+
+  background-color: var(--warm-white);
+
+  box-shadow:
+    0 6px 15px rgba(59, 42, 34, 0.08);
+
   z-index: 10;
+
   position: relative;
 }
 
 .project-details {
   margin-top: 1rem;
+
   flex-grow: 1;
+
   display: flex;
+
   flex-direction: column;
+
   justify-content: flex-start;
 }
 
 .project-image {
   width: 100%;
-  height: 300px; /* fixed height for image */
+
+  height: 300px;
+
   object-fit: cover;
+
   border-radius: 6px;
+
   margin-bottom: 1rem;
 }
 
-/* Shrink unselected panels */
 .project-panel:not(.expanded) {
   flex-basis: 10%;
+
   transition: flex-basis 0.5s ease;
+
   opacity: 0.7;
 }
 
@@ -376,30 +859,37 @@ a:hover {
   opacity: 1;
 }
 
-/* Optional: smooth text and image appearance */
 .project-details p {
   font-size: 1rem;
+
   line-height: 1.4;
-  color: #555;
+
+  color: var(--light-brown);
 }
 
+
 /* ------------------------------
-   BLOG SECTION + BLOG CARD
+   BLOG SECTION
 --------------------------------*/
 
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  );
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+
   gap: 1.5rem;
+
   margin-top: 2rem;
+
+  background-color: var(--warm-white);
 }
 
 .blog-card {
   display: flex;
+
   flex-direction: column;
+
   justify-content: space-between;
 
   min-height: 220px;
@@ -408,31 +898,27 @@ a:hover {
 
   border-radius: 15px;
 
-  background: white;
+  background: var(--warm-white);
 
   text-decoration: none;
 
-  color: black;
+  color: var(--brown);
 
-  box-shadow: 0px 4px 12px rgba(
-    0,
-    0,
-    0,
-    0.1
-  );
+  border: 1px solid var(--border);
 
-  transition: all 0.3s ease;
+  box-shadow:
+    0 4px 12px rgba(59, 42, 34, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .blog-card:hover {
   transform: translateY(-5px);
 
-  box-shadow: 0px 8px 20px rgba(
-    0,
-    0,
-    0,
-    0.15
-  );
+  box-shadow:
+    0 8px 20px rgba(59, 42, 34, 0.10);
 }
 
 .category {
@@ -442,15 +928,19 @@ a:hover {
 
   text-transform: uppercase;
 
-  color: #666;
+  color: var(--sage);
 }
 
 .blog-card h3 {
   margin: 1rem 0;
+
+  color: var(--phthalo-green);
 }
 
 .blog-card p {
   line-height: 1.5;
+
+  color: var(--light-brown);
 }
 
 .view-all-btn {
@@ -462,13 +952,196 @@ a:hover {
 
   border-radius: 10px;
 
-  background: black;
+  background: var(--terracotta);
 
-  color: white;
+  color: var(--warm-white);
 
   text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.blog-preview-footer {
-  text-align: center;
+.view-all-btn:hover {
+  background: var(--phthalo-green);
+
+  color: var(--warm-white);
+
+  text-decoration: none;
+
+  transform: translateY(-2px);
+}
+
+
+/* ------------------------------
+   RESPONSIVE BOOK CARDS
+--------------------------------*/
+
+@media (max-width: 700px) {
+  .carousel > .carousel__slide {
+    min-width: 90%;
+
+    flex-basis: 90%;
+  }
+
+  .book-card {
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .book-card img {
+    width: 160px;
+
+    height: 230px;
+  }
+
+  .book-info {
+    padding: 0.5rem;
+  }
+}
+/* ------------------------------
+   BOOK CARD
+--------------------------------*/
+
+.book-card {
+  position: relative;
+
+  display: flex;
+
+  gap: 1.5rem;
+
+  padding: 1.5rem;
+
+  border-radius: 20px;
+
+   background-color: var(--phthalo-green);
+
+  color: var(--cream);
+
+  overflow: hidden;
+
+  min-height: 300px;
+
+  isolation: isolate;
+
+  box-shadow:
+    0 8px 25px rgba(59, 42, 34, 0.12);
+}
+
+
+/* ------------------------------
+   BOOK COVER GLOW
+--------------------------------*/
+
+.book-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -40px;
+
+  z-index: -1;
+
+  background-image: var(--book-cover);
+
+  background-size: cover;
+
+  background-position: center;
+
+  filter: blur(45px);
+
+  opacity: 0.45;
+
+  transform: scale(1.15);
+
+  transition:
+    opacity 0.4s ease,
+    filter 0.4s ease,
+    transform 0.4s ease;
+}
+
+
+/* ------------------------------
+   EXTRA COLOR OVERLAY
+--------------------------------*/
+
+.book-card::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(23, 74, 58, 0.85),
+      rgba(23, 74, 58, 0.55)
+    );
+
+  pointer-events: none;
+}
+
+
+/* ------------------------------
+   BOOK IMAGE
+--------------------------------*/
+
+.book-card img {
+  position: relative;
+
+  z-index: 2;
+
+  display: block;
+
+  width: 180px;
+
+  height: 260px;
+
+  flex-shrink: 0;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ------------------------------
+   BOOK INFORMATION
+--------------------------------*/
+
+.book-info {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 1rem;
+}
+
+
+/* ------------------------------
+   GLOW ON HOVER
+--------------------------------*/
+
+.carousel__slide:hover .book-card::before {
+  opacity: 0.65;
+
+  filter: blur(50px);
+
+  transform: scale(1.2);
 }
