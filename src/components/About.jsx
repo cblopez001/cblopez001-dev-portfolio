@@ -14,13 +14,13 @@ export default function About() {
           </p>
         </div>
 
-        <div className="currently-reading">
-          <h3>📚 Currently Reading</h3>
-          <img 
-            src={currentBook}
-            alt="Current Book" 
-          />
-          <p><em>Vampires of El Norte by Isabel Cañas</em></p>
+        <div id="Reading Recommendations" class="carousel carousel--scroll-markers carousel--inert">
+          <div class="carousel__slide" data-label="Slide 1">…</div>
+          <div class="carousel__slide" data-label="Slide 2">…</div>
+          <div class="carousel__slide" data-label="Slide 3">…</div>
+          <div class="carousel__slide" data-label="Slide 4">…</div>
+          <div class="carousel__slide" data-label="Slide 5">…</div>
+          <div class="carousel__slide" data-label="Slide 6">…</div>
         </div>
       </div>
     </section>
