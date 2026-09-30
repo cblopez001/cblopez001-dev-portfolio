@@ -2,7 +2,7 @@ import React from 'react';
 
 import howlsMovingCastle from '../assets/HowlsMovingCastle.png';
 import neverLetMeGo from '../assets/NeverLetMeGo.png';
-import currentBook from '../assets/Silmarillion.jpeg';
+import silmarillion from '../assets/Silmarillion.png';
 
 const books = [
   {
@@ -20,10 +20,10 @@ const books = [
     review: 'A masterpiece of politics, culture, and world building.'
   },
   {
-    title: '',
-    author: 'Robin Sharma',
+    title: 'Silmarillion',
+    author: 'J.R. Tolkien',
     rating: 5,
-    image: currentBook,
+    image: silmarillion,
     review: 'Currently reading and enjoying every chapter.'
   },
    {
