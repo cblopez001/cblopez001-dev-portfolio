@@ -52,8 +52,6 @@ export default function About() {
           <p>
             I'm a software engineer, lifelong learner, and problem solver who enjoys turning ideas into reality. After graduating from the Institute of Data at Virginia Commonwealth University, I've had the opportunity to balance two worlds: teaching software engineering concepts to aspiring developers while leading operational teams as a Supply Chain Supervisor at VCU.
 What I love most about coding is its ability to create meaningful change. Whether I'm building an application, streamlining a process, or solving a real-world problem, software gives me a creative outlet and a way to actively contribute to the world around me.
-
-Outside of technology, you'll usually find me with a good book, experimenting with new recipes, learning languages, or planning my next adventure abroad.
           </p>
         </div>
 
@@ -82,6 +80,10 @@ Outside of technology, you'll usually find me with a good book, experimenting wi
             <p>Japan for English teaching and language immersion.</p>
           </div>
         </div>
+
+        <p>When I'm not building software, you'll usually find me with a good book, experimenting with recipes for my ever-growing cookbook, spending time with my cat and dog, learning a new language, or planning my next adventure abroad. Curiosity tends to be the theme that connects all of my hobbies.
+
+I don't believe in judging books or people by their covers, but I do believe a bookshelf can tell you a lot about its owner. If you want a shortcut to understanding how I think, the books below are a good place to start. They've shaped my perspective, influenced how I solve problems, and occasionally sent me down a rabbit hole of ideas I wasn't expecting.</p>
 
         <div
           id="reading_recommendations"
