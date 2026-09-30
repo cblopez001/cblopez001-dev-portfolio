@@ -39,7 +39,6 @@ This project serves as both a professional portfolio and a personal publishing p
 - Individual blog post pages
 - Search functionality
 - Category filtering
-- Audio content support
 - Database-backed content management
 - Responsive design improvements
 - SEO optimization
