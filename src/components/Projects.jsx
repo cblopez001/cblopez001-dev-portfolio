@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const projectsData = [
   {
     id: 1,
-    title: 'MONSTER MANSION PODCAST',
+    title: 'PERSONAL PORTFOLIO + BLOG',
     coverPhoto: '/path/to/project1.jpg',
     description: 'Short description of Project One.',
   },
@@ -15,13 +15,13 @@ const projectsData = [
   },
   {
     id: 3,
-    title: 'GALAGA CLONE',
+    title: 'FILM FLOWERS',
     coverPhoto: '/path/to/project4.jpg',
     description: 'Short description of Project Four.',
   },
   {
     id: 4,
-    title: 'BUG OUT',
+    title: 'EVENT BUDGET + PLANNER',
     coverPhoto: '/path/to/project5.jpg',
     description: 'Short description of Project Five.',
   },
