@@ -1,22 +1,22 @@
 import React from 'react';
 
-import atomicHabits from '../assets/HowlsMovingCastle.jpg';
-import dune from '../assets/NeverLetMeGo.jpg';
+import howlsMovingCastle from '../assets/HowlsMovingCastle.png';
+import neverLetMeGo from '../assets/NeverLetMeGo.png';
 import currentBook from '../assets/Silmarillion.jpeg';
 
 const books = [
   {
-    title: 'Atomic Habits',
-    author: 'James Clear',
+    title: 'Never Let Me Go',
+    author: 'Kazuo Ishiguro',
     rating: 5,
-    image: atomicHabits,
+    image: neverLetMeGo,
     review: 'One of the most practical books on continuous improvement.'
   },
   {
-    title: 'Dune',
-    author: 'Frank Herbert',
+    title: "Howl's Moving Castle",
+    author: 'Diana Wynn Jones',
     rating: 4,
-    image: dune,
+    image: howlsMovingCastle,
     review: 'A masterpiece of politics, culture, and world building.'
   },
   {
