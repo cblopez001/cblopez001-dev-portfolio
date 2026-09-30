@@ -20,7 +20,7 @@ const books = [
     review: 'A masterpiece of politics, culture, and world building.'
   },
   {
-    title: 'Current Read',
+    title: '',
     author: 'Robin Sharma',
     rating: 5,
     image: currentBook,
