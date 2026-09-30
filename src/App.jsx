@@ -1,14 +1,19 @@
 import React, { useRef } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
-import Blog from './components/Blog';
+import BlogPreview from './components/BlogPreview';
+
+import BlogPage from './BlogPage';
+
 import './index.css';
 
-export default function App() {
+function Portfolio() {
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
@@ -30,12 +35,13 @@ export default function App() {
       case 'experience':
         experienceRef.current?.scrollIntoView({ behavior: 'smooth' });
         break;
+      case 'blog':
+        blogRef.current?.scrollIntoView({ behavior: 'smooth' });
+        break;
       case 'contact':
         contactRef.current?.scrollIntoView({ behavior: 'smooth' });
         break;
-        case 'blog':
-        blogRef.current?.scrollIntoView({ behavior: 'smooth' });
-        break;
+
       default:
         break;
     }
@@ -61,13 +67,24 @@ export default function App() {
         <Projects />
       </section>
 
+      <section ref={blogRef} id="blog" style={{ minHeight: '100vh', padding: '2rem', backgroundColor: '#f7f7f7' }}>
+        <BlogPreview />
+      </section>
+
       <section ref={contactRef} id="contact" style={{ minHeight: '100vh', padding: '2rem', backgroundColor: '#aaa' }}>
         <Contact />
       </section>
-
-      <section ref={contactRef} id="blog" style={{ minHeight: '100vh', padding: '2rem', backgroundColor: '#aaa' }}>
-        <Blog />
-      </section>
     </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Portfolio />} />
+      <Route path= "/blog" element={<BlogPage />} />
+    </Routes>
+    </BrowserRouter>
   );
 }
