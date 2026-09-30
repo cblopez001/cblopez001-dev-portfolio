@@ -100,10 +100,6 @@ a:hover {
    ABOUT SECTION
 --------------------------------*/
 
-/* ------------------------------
-   ABOUT SECTION
--------------------------------- */
-
 .about-section {
   max-width: 1000px;
   margin: 2rem auto;
@@ -135,6 +131,55 @@ a:hover {
   line-height: 1.7;
 }
 
+/* ------------------------------
+   FUN FACT CARD 
+-------------------------------- */
+
+.fun-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.fact-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+
+  padding: 1.25rem;
+  border-radius: 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.fact-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.15),
+    0 0 20px rgba(100, 149, 237, 0.2);
+}
+
+.fact-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.fact-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.fact-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  opacity: 0.85;
+}
 
 /* ------------------------------
    BOOK CAROUSEL

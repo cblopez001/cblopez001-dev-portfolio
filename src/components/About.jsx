@@ -50,13 +50,37 @@ export default function About() {
       <div className="about-content">
         <div className="about-text">
           <p>
-            I am a passionate software engineer recently graduated from the
-            Institute of Data at Virginia Commonwealth University. Currently,
-            I work as a Software Engineering Teaching Assistant while also
-            managing operations as a Supply Chain Supervisor at VCU.
-            When I'm not coding or managing supply chains, you'll find me
-            buried in a good book, constantly expanding my horizons.
+            I'm a software engineer, lifelong learner, and problem solver who enjoys turning ideas into reality. After graduating from the Institute of Data at Virginia Commonwealth University, I've had the opportunity to balance two worlds: teaching software engineering concepts to aspiring developers while leading operational teams as a Supply Chain Supervisor at VCU.
+What I love most about coding is its ability to create meaningful change. Whether I'm building an application, streamlining a process, or solving a real-world problem, software gives me a creative outlet and a way to actively contribute to the world around me.
+
+Outside of technology, you'll usually find me with a good book, experimenting with new recipes, learning languages, or planning my next adventure abroad.
           </p>
+        </div>
+
+        <div className="fun-facts">
+          <div className="fact-card">
+            <span className="fact-icon">🐶</span>
+            <h3>Animal Lover</h3>
+            <p>Proud pet parent to a cat and a dog.</p>
+          </div>
+
+          <div className="fact-card">
+            <span className="fact-icon">🍪</span>
+            <h3>Signature Recipe</h3>
+            <p>Known for making dangerously good sugar cookies.</p>
+          </div>
+
+          <div className="fact-card">
+            <span className="fact-icon">🌎</span>
+            <h3>Language Learner</h3>
+            <p>English, Spanish, French, and Japanese in progress.</p>
+          </div>
+
+          <div className="fact-card">
+            <span className="fact-icon">✈️</span>
+            <h3>Next Adventure</h3>
+            <p>Japan for English teaching and language immersion.</p>
+          </div>
         </div>
 
         <div
