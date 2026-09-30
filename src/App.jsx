@@ -5,6 +5,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
+import Blog from './components/Blog';
 import './index.css';
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
   const projectsRef = useRef(null);
   const experienceRef = useRef(null);
   const contactRef = useRef(null);
+  const blogRef = useRef(null);
 
   const scrollToSection = (section) => {
     switch(section) {
@@ -31,6 +33,9 @@ export default function App() {
       case 'contact':
         contactRef.current?.scrollIntoView({ behavior: 'smooth' });
         break;
+        case 'blog':
+        blogRef.current?.scrollIntoView({ behavior: 'smooth' });
+        break;
       default:
         break;
     }
@@ -40,24 +45,28 @@ export default function App() {
     <>
       <Navbar setSection={scrollToSection} />
       
-      <section ref={heroRef} id="hero" style={{ height: '100vh', padding: '0rem', backgroundColor: '#eee' }}>
+      <section ref={heroRef} id="hero" style={{ minHeight: '100vh', padding: '0rem', backgroundColor: '#eee' }}>
         <Hero />
       </section>
       
-      <section ref={aboutRef} id="about" style={{ height: '100vh', padding: '2rem', backgroundColor: '#ddd' }}>
+      <section ref={aboutRef} id="about" style={{ minHeight: '100vh', padding: '2rem', backgroundColor: '#ddd' }}>
         <About />
       </section>
             
-      <section ref={experienceRef} id="experience" style={{ height: '100vh', padding: '2rem', backgroundColor: '#bbb' }}>
+      <section ref={experienceRef} id="experience" style={{ minHeight: '100vh', padding: '2rem', backgroundColor: '#bbb' }}>
         <Experience />
       </section>
       
-      <section ref={projectsRef} id="projects" style={{ height: '100vh', padding: '2rem', backgroundColor: '#ccc' }}>
+      <section ref={projectsRef} id="projects" style={{ minHeight: '100vh', padding: '2rem', backgroundColor: '#ccc' }}>
         <Projects />
       </section>
 
-      <section ref={contactRef} id="contact" style={{ height: '100vh', padding: '2rem', backgroundColor: '#aaa' }}>
+      <section ref={contactRef} id="contact" style={{ minHeight: '100vh', padding: '2rem', backgroundColor: '#aaa' }}>
         <Contact />
+      </section>
+
+      <section ref={contactRef} id="blog" style={{ minHeight: '100vh', padding: '2rem', backgroundColor: '#aaa' }}>
+        <Blog />
       </section>
     </>
   );
