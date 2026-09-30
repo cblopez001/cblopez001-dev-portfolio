@@ -1,16 +1,140 @@
-# React + Vite
+# Personal Portfolio & Blog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, single-page portfolio website built with React and Vite.
 
-Currently, two official plugins are available:
+This project serves as both a professional portfolio and a personal publishing platform. Visitors can learn about my background, explore projects and experience, and browse featured blog content through a dedicated blog preview section.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+### Portfolio Sections
+- Hero section
+- About Me
+- Professional Experience
+- Projects Showcase
+- Contact Section
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Blog Preview
+- Featured article cards
+- Category labels
+- Article excerpts
+- "View All Posts" call-to-action
+- Future integration with a dedicated blog page
 
-## Expanding the ESLint configuration
+### Navigation
+- Smooth scrolling between sections
+- Responsive single-page experience
+- Future-ready routing structure using React Router
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+### Frontend
+- React
+- Vite
+- React Router DOM
+- JavaScript (ES6+)
+- CSS3
+
+### Planned Enhancements
+- Full blog platform (`/blog`)
+- Individual blog post pages
+- Search functionality
+- Category filtering
+- Audio content support
+- Database-backed content management
+- Responsive design improvements
+- SEO optimization
+
+## Project Structure
+
+```text
+src/
+│
+├── assets/
+│
+├── components/
+│   ├── About.jsx
+│   ├── BlogPreview.jsx
+│   ├── Contact.jsx
+│   ├── Experience.jsx
+│   ├── Hero.jsx
+│   ├── Navbar.jsx
+│   └── Projects.jsx
+│
+├── App.jsx
+├── BlogPage.jsx
+├── index.css
+└── main.jsx
+```
+
+## Getting Started
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Start Development Server
+
+```bash
+npm run dev
+```
+
+Open:
+
+```text
+http://localhost:5173
+```
+
+in your browser.
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## Roadmap
+
+### Phase 1
+- [x] Portfolio sections
+- [x] Smooth-scrolling navigation
+- [x] Blog preview section
+- [x] Placeholder article cards
+
+### Phase 2
+- [ ] Dedicated blog page
+- [ ] Blog categories
+- [ ] Featured posts
+- [ ] Search and filtering
+
+### Phase 3
+- [ ] Individual article pages
+- [ ] Audio content support
+- [ ] Database integration
+- [ ] Content management workflow
+
+## Design Direction
+
+The visual design is inspired by a clean, editorial aesthetic with earthy tones, generous whitespace, and a focus on readability.
+
+Planned styling includes:
+- Warm neutral backgrounds
+- Sage green accent colors
+- Editorial typography
+- Card-based content layouts
+- Smooth interactions and subtle animations
+
+## Author
+
+Built and maintained by Cherakye Lopez
+
+---
+
+This project is continually evolving as I expand both my portfolio and blog content.
