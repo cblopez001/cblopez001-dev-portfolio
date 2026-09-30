@@ -115,7 +115,6 @@ npm run preview
 
 ### Phase 3
 - [ ] Individual article pages
-- [ ] Audio content support
 - [ ] Database integration
 - [ ] Content management workflow
 
